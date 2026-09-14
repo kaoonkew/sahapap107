@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio ของ สหภาพ ดาระดาด รหัสนักศึกษา 67122630107">
+  <meta name="theme-color" content="#111318">
+  <title>สหภาพ ดาระดาด | Portfolio</title>
+  <style>
+:root {
+  --bg: #f4f1e9;
+  --surface: #ffffff;
+  --ink: #111318;
+  --muted: #666a73;
+  --line: #d7d2c7;
+  --accent: #d9ff59;
+  --accent-2: #b6c9ff;
+  --dark: #111318;
+  --radius: 24px;
+  --shadow: 0 22px 60px rgba(17, 19, 24, .10);
+  --max: 1180px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Thai", Tahoma, sans-serif;
+  line-height: 1.65;
+}
+a { color: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid #4974ff; outline-offset: 4px; }
+
+.skip-link { position: fixed; top: 10px; left: 10px; z-index: 999; padding: 10px 14px; background: #fff; border: 2px solid var(--ink); border-radius: 12px; transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+.container { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
+.section { padding: 104px 0; }
+.section-soft { background: #ebe7dd; }
+.section-dark { background: var(--dark); color: #f8f8f4; }
+.eyebrow { margin: 0 0 14px; font-size: .78rem; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+
+.site-header { position: sticky; top: 0; z-index: 50; background: rgba(244, 241, 233, .94); border-bottom: 1px solid rgba(17,19,24,.12); backdrop-filter: blur(10px); }
+.nav-wrap { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { font-size: 1.45rem; font-weight: 950; text-decoration: none; letter-spacing: -.05em; }
+.brand span { color: #789500; }
+.primary-nav { display: flex; align-items: center; gap: 18px; }
+.primary-nav a { text-decoration: none; font-size: .88rem; font-weight: 780; }
+.primary-nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.nav-cta { padding: 8px 13px; background: var(--ink); color: white; border-radius: 999px; }
+.nav-toggle { display: none; width: 46px; height: 42px; background: transparent; border: 1px solid var(--line); border-radius: 12px; padding: 9px; cursor: pointer; }
+.nav-toggle span { display: block; height: 2px; background: var(--ink); margin: 5px 0; transition: .2s ease; }
+
+.hero { min-height: calc(100vh - 74px); display: grid; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 64px; align-items: center; }
+.hero h1 { margin: 0; font-size: clamp(4.3rem, 9vw, 8.4rem); line-height: .82; letter-spacing: -.075em; }
+.hero h1 span { display: inline-block; color: #536900; }
+.hero-lead { max-width: 760px; margin: 28px 0 0; font-size: clamp(1.06rem, 2vw, 1.35rem); color: #3f424a; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 18px; border-radius: 999px; text-decoration: none; font-weight: 850; border: 1px solid var(--ink); }
+.button.primary { background: var(--ink); color: #fff; }
+.button.secondary { background: var(--accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.chips span, .tags li { padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: .78rem; font-weight: 760; }
+
+.identity-card { background: var(--surface); border: 1px solid var(--line); border-radius: 30px; padding: 30px; box-shadow: var(--shadow); }
+.avatar { width: 104px; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: var(--accent); border: 2px solid var(--ink); font-weight: 950; font-size: 2rem; }
+.card-kicker { margin: 26px 0 6px; font-size: .72rem; font-weight: 900; letter-spacing: .14em; }
+.identity-card h2 { margin: 0; font-size: 1.9rem; }
+.identity-card dl { margin: 28px 0 0; }
+.identity-card dl div { display: grid; grid-template-columns: 110px 1fr; gap: 14px; padding: 13px 0; border-top: 1px solid var(--line); }
+.identity-card dt { color: var(--muted); }
+.identity-card dd { margin: 0; font-weight: 800; text-align: right; }
+
+.split { display: grid; grid-template-columns: .76fr 1.24fr; gap: 72px; align-items: start; }
+.section-heading h2 { margin: 0; font-size: clamp(2.55rem, 5vw, 5rem); line-height: 1.02; letter-spacing: -.055em; }
+.section-heading.horizontal { display: flex; align-items: end; justify-content: space-between; gap: 50px; }
+.section-intro { max-width: 480px; margin: 0; color: var(--muted); }
+.section-heading.light h2, .section-heading.light .eyebrow { color: #f8f8f4; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 34px; }
+.prose h3 { margin: 0 0 12px; font-size: 1.45rem; }
+.prose p { font-size: 1.06rem; }
+.notice { margin-top: 24px; padding: 14px 16px; border: 1px dashed #8e7d1b; background: #fff6b4; border-radius: 14px; }
+.placeholder { color: #8a5c00 !important; }
+
+.timeline { margin-top: 52px; border-top: 1px solid var(--line); }
+.timeline-item { display: grid; grid-template-columns: 190px 1fr; gap: 34px; padding: 32px 0; border-bottom: 1px solid var(--line); }
+.timeline-item .year { font-weight: 900; }
+.timeline-item h3 { margin: 0; font-size: 1.55rem; }
+.timeline-item p { margin: 4px 0; }
+
+.card-grid { display: grid; gap: 16px; margin-top: 50px; }
+.card-grid.four { grid-template-columns: repeat(4, 1fr); }
+.card-grid.three { grid-template-columns: repeat(3, 1fr); }
+.skill-card { min-height: 290px; padding: 26px; border: 1px solid rgba(255,255,255,.18); border-radius: 20px; }
+.skill-card > span { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: var(--ink); font-weight: 900; }
+.skill-card h3 { margin: 62px 0 8px; font-size: 1.55rem; }
+.skill-card p { margin: 0; color: #c9c9c1; }
+.dark-note { margin: 18px 0 0; color: #bfc0b8; }
+
+.project-card { min-height: 350px; display: flex; flex-direction: column; padding: 26px; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); }
+.project-card.feature { background: var(--accent); }
+.project-meta { display: flex; justify-content: space-between; gap: 16px; font-size: .72rem; font-weight: 900; letter-spacing: .1em; }
+.project-card h3 { margin: 64px 0 10px; font-size: 1.65rem; line-height: 1.12; }
+.project-card p { margin: 0; color: #494d56; }
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; padding: 0; margin: auto 0 0; }
+.tags li { border-color: rgba(17,19,24,.24); }
+
+.info-list { border-top: 1px solid var(--line); }
+.info-list article { display: grid; grid-template-columns: 140px 1fr; gap: 26px; padding: 25px 0; border-bottom: 1px solid var(--line); }
+.info-list > article > span { font-size: .76rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.info-list h3, .info-list p { margin: 0; }
+.info-list p { color: var(--muted); }
+
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 50px; }
+.process-grid article { padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; }
+.process-grid span { display: inline-block; padding: 5px 9px; border-radius: 999px; background: var(--accent-2); font-weight: 900; font-size: .78rem; }
+.process-grid h3 { margin: 42px 0 8px; }
+.process-grid p { margin: 0; color: var(--muted); }
+.ai-disclosure { display: grid; grid-template-columns: 180px 1fr; gap: 22px; margin-top: 16px; padding: 21px 24px; border: 1px solid var(--ink); border-radius: 18px; }
+.ai-disclosure p { margin: 0; }
+
+.contact-section { background: var(--dark); color: #f8f8f4; }
+.contact-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 74px; }
+.contact-list { border-top: 1px solid rgba(255,255,255,.18); }
+.contact-list div { display: grid; grid-template-columns: 130px 1fr; gap: 24px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+.contact-list span { color: #aeb0b5; font-size: .82rem; font-weight: 800; }
+.contact-list strong { overflow-wrap: anywhere; }
+.contact-list .placeholder { color: #ffda7a !important; }
+
+.site-footer { background: var(--dark); color: #afb0b5; border-top: 1px solid rgba(255,255,255,.12); }
+.footer-wrap { min-height: 78px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.footer-wrap p { margin: 0; }
+.footer-wrap a { color: #fff; }
+
+@media (max-width: 980px) {
+  .hero-grid, .split, .contact-grid { grid-template-columns: 1fr; gap: 44px; }
+  .hero { min-height: auto; }
+  .identity-card { max-width: 660px; }
+  .card-grid.four, .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .card-grid.three { grid-template-columns: 1fr; }
+  .project-card { min-height: 270px; }
+}
+
+@media (max-width: 780px) {
+  .section { padding: 78px 0; }
+  .nav-toggle { display: block; }
+  .primary-nav { position: absolute; top: 66px; left: 20px; right: 20px; display: none; flex-direction: column; align-items: stretch; gap: 4px; padding: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
+  .primary-nav.is-open { display: flex; }
+  .primary-nav a { padding: 10px 12px; }
+  .nav-cta { text-align: center; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .section-heading.horizontal { display: block; }
+  .section-intro { margin-top: 18px; }
+  .timeline-item { grid-template-columns: 1fr; gap: 6px; }
+  .info-list article { grid-template-columns: 1fr; gap: 6px; }
+  .ai-disclosure { grid-template-columns: 1fr; gap: 6px; }
+}
+
+@media (max-width: 560px) {
+  .container { width: min(calc(100% - 28px), var(--max)); }
+  .hero h1 { font-size: clamp(3.7rem, 18vw, 5.7rem); }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .card-grid.four, .process-grid { grid-template-columns: 1fr; }
+  .skill-card { min-height: 220px; }
+  .skill-card h3 { margin-top: 34px; }
+  .identity-card dl div { grid-template-columns: 1fr; gap: 3px; }
+  .identity-card dd { text-align: left; }
+  .contact-list div { grid-template-columns: 1fr; gap: 4px; }
+  .footer-wrap { padding: 18px 0; flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+
+</style>
+  <script>
+'use strict';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.querySelector('.nav-toggle');
+  const primaryNav = document.querySelector('.primary-nav');
+
+  if (navToggle && primaryNav) {
+    navToggle.addEventListener('click', () => {
+      const willOpen = navToggle.getAttribute('aria-expanded') !== 'true';
+      navToggle.setAttribute('aria-expanded', String(willOpen));
+      navToggle.setAttribute('aria-label', willOpen ? 'ปิดเมนู' : 'เปิดเมนู');
+      primaryNav.classList.toggle('is-open', willOpen);
+    });
+
+    primaryNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'เปิดเมนู');
+        primaryNav.classList.remove('is-open');
+      });
+    });
+  }
+
+  const year = document.querySelector('#year');
+  if (year) year.textContent = String(new Date().getFullYear());
+});
+
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="กลับไปด้านบน">SD<span>.</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="เมนูหลัก">
+        <a href="#profile">โปรไฟล์</a>
+        <a href="#education">การศึกษา</a>
+        <a href="#skills">ทักษะ</a>
+        <a href="#experience">ประสบการณ์</a>
+        <a href="#additional">เพิ่มเติม</a>
+        <a href="#ai">การใช้ AI</a>
+        <a class="nav-cta" href="#contact">ติดต่อ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">PERSONAL PORTFOLIO · 2026</p>
+          <h1 id="hero-title">สหภาพ<br><span>ดาระดาด</span></h1>
+          <p class="hero-lead">นักศึกษารหัส <strong>67122630107</strong> สนใจเทคโนโลยีดิจิทัล การพัฒนาเว็บไซต์ และการใช้ AI เป็นผู้ช่วยในการสร้างผลงานอย่างมีความรับผิดชอบ</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#profile">ดูข้อมูลของฉัน</a>
+            <a class="button secondary" href="#ai">ดูการใช้ AI</a>
+          </div>
+          <div class="chips" aria-label="หัวข้อความสนใจ">
+            <span>HTML / CSS / JavaScript</span>
+            <span>AI-Assisted Coding</span>
+            <span>Digital Business</span>
+          </div>
+        </div>
+
+        <aside class="identity-card" aria-label="ข้อมูลย่อ">
+          <div class="avatar" aria-hidden="true">สด</div>
+          <p class="card-kicker">STUDENT PROFILE</p>
+          <h2>สหภาพ ดาระดาด</h2>
+          <dl>
+            <div><dt>รหัสนักศึกษา</dt><dd>67122630107</dd></div>
+            <div><dt>สถาบัน</dt><dd>มหาวิทยาลัยราชภัฏเทพสตรี</dd></div>
+            <div><dt>คณะ</dt><dd>เทคโนโลยีสารสนเทศ</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="profile" class="section section-soft">
+      <div class="container split">
+        <div class="section-heading">
+          <p class="eyebrow">01 / PROFILE</p>
+          <h2>ข้อมูลส่วนตัว<br>และเป้าหมายอาชีพ</h2>
+        </div>
+        <div class="panel prose">
+          <h3>Professional Summary</h3>
+          <p>ผมเป็นนักศึกษาที่กำลังพัฒนาทักษะด้านเทคโนโลยีสารสนเทศ โดยสนใจการสร้างเว็บไซต์ การใช้เครื่องมือดิจิทัล และการประยุกต์ใช้ปัญญาประดิษฐ์เพื่อช่วยวางแผน เขียนโค้ด ตรวจสอบข้อผิดพลาด และปรับปรุงคุณภาพของงาน</p>
+          <p>เป้าหมายของผมคือเรียนรู้จากการลงมือทำจริง พัฒนาความสามารถด้านการแก้ปัญหา และต่อยอดความรู้ไปสู่งานด้านเทคโนโลยีและธุรกิจดิจิทัลในอนาคต</p>
+          <div class="notice"><strong>ก่อนส่งงาน:</strong> ปรับข้อความส่วนนี้ให้ตรงกับเป้าหมายอาชีพจริงของคุณมากที่สุด</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-heading horizontal">
+          <div><p class="eyebrow">02 / EDUCATION</p><h2>ประวัติการศึกษา</h2></div>
+          <p class="section-intro">ข้อมูลที่ทราบจากงานถูกใส่ไว้แล้ว ส่วนที่ยังไม่ทราบทำเครื่องหมายไว้ให้แก้ไขก่อนส่ง</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="year">ปัจจุบัน</div>
+            <div>
+              <h3>มหาวิทยาลัยราชภัฏเทพสตรี</h3>
+              <p>คณะเทคโนโลยีสารสนเทศ</p>
+              <p class="placeholder">กรุณาเพิ่ม: สาขาวิชา · ชั้นปี · GPA (ถ้าต้องการ)</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="year">ก่อนมหาวิทยาลัย</div>
+            <div>
+              <h3>ข้อมูลสถานศึกษาเดิม</h3>
+              <p class="placeholder">กรุณาเพิ่ม: ชื่อโรงเรียน/วิทยาลัย · แผนการเรียน/สาขา · ปีที่จบ</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-dark">
+      <div class="container">
+        <div class="section-heading light">
+          <p class="eyebrow">03 / SKILLS & COMPETENCIES</p>
+          <h2>ทักษะและความสามารถ</h2>
+        </div>
+        <div class="card-grid four">
+          <article class="skill-card"><span>01</span><h3>HTML</h3><p>จัดโครงสร้างเนื้อหาเว็บไซต์ด้วย Semantic HTML และคำนึงถึงการเข้าถึงข้อมูล</p></article>
+          <article class="skill-card"><span>02</span><h3>CSS</h3><p>ออกแบบ Layout, Responsive Design และจัดรูปแบบเว็บไซต์ให้เหมาะกับหลายขนาดหน้าจอ</p></article>
+          <article class="skill-card"><span>03</span><h3>JavaScript</h3><p>เพิ่มพฤติกรรมพื้นฐานของหน้าเว็บ เช่น เมนูมือถือและการอัปเดตข้อมูลอัตโนมัติ</p></article>
+          <article class="skill-card"><span>04</span><h3>AI-Assisted Coding</h3><p>ใช้ AI ช่วยวางแผน สร้างโค้ด วิเคราะห์ปัญหา และปรับแก้โดยตรวจสอบผลลัพธ์ด้วยตนเอง</p></article>
+        </div>
+        <p class="dark-note">เพิ่มทักษะจริงอื่น ๆ ของคุณได้ เช่น Microsoft Office, Canva, Communication, Teamwork หรือภาษา</p>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-heading horizontal">
+          <div><p class="eyebrow">04 / EXPERIENCE</p><h2>ประสบการณ์และโครงการ</h2></div>
+          <p class="section-intro">หากยังไม่มีประสบการณ์ทำงาน สามารถใช้โครงการในชั้นเรียน กิจกรรม หรือผลงานที่เคยทำแทนได้</p>
+        </div>
+        <div class="card-grid three">
+          <article class="project-card feature">
+            <div class="project-meta"><span>PROJECT</span><span>2569</span></div>
+            <h3>Personal Portfolio Website</h3>
+            <p>พัฒนาเว็บไซต์ Portfolio สำหรับรายวิชา วท 6000307 ปัญญาประดิษฐ์ในธุรกิจดิจิทัล โดยใช้ ChatGPT ช่วยในกระบวนการ AI-Assisted Coding และ Vibe Coding</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>AI</li></ul>
+          </article>
+          <article class="project-card">
+            <div class="project-meta"><span>ACTIVITY</span><span>EDIT</span></div>
+            <h3>กิจกรรมหรือโครงการ</h3>
+            <p class="placeholder">กรุณาใส่กิจกรรมจริงของคุณ พร้อมบทบาท สิ่งที่ทำ และสิ่งที่ได้เรียนรู้</p>
+            <ul class="tags"><li>Teamwork</li><li>Learning</li></ul>
+          </article>
+          <article class="project-card">
+            <div class="project-meta"><span>EXPERIENCE</span><span>EDIT</span></div>
+            <h3>งานพาร์ทไทม์หรือประสบการณ์อื่น</h3>
+            <p class="placeholder">ถ้ายังไม่มี ให้เปลี่ยนเป็นงานกลุ่ม งานอาสา หรือโครงการในรายวิชาอื่นที่เคยทำ</p>
+            <ul class="tags"><li>Responsibility</li><li>Communication</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="additional" class="section section-soft">
+      <div class="container split">
+        <div class="section-heading">
+          <p class="eyebrow">05 / ADDITIONAL INFORMATION</p>
+          <h2>ข้อมูลเพิ่มเติม</h2>
+        </div>
+        <div class="info-list">
+          <article><span>Certificates</span><div><h3>ใบรับรอง / การอบรม</h3><p class="placeholder">เพิ่มใบรับรองจริง เช่น หลักสูตรออนไลน์ การอบรม หรือ Workshop</p></div></article>
+          <article><span>Awards</span><div><h3>รางวัล / ความสำเร็จ</h3><p class="placeholder">เพิ่มข้อมูลจริง หากไม่มี สามารถระบุความสำเร็จที่ภาคภูมิใจแทนได้</p></div></article>
+          <article><span>Interests</span><div><h3>AI · Web Technology · Digital Business</h3><p>หัวข้อความสนใจที่สอดคล้องกับโครงการนี้ สามารถแก้ให้ตรงกับตัวตนจริงได้</p></div></article>
+          <article><span>Special</span><div><h3>ความสามารถพิเศษ</h3><p class="placeholder">เพิ่มความสามารถพิเศษ งานอดิเรก หรือภาษาที่ใช้ได้</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai" class="section">
+      <div class="container">
+        <div class="section-heading horizontal">
+          <div><p class="eyebrow">06 / AI USAGE</p><h2>การใช้ AI ในการพัฒนา</h2></div>
+          <p class="section-intro">ใช้กระบวนการ Think → Prompt → Result → Refine และตรวจสอบโค้ดก่อนนำไปใช้จริง</p>
+        </div>
+        <div class="process-grid">
+          <article><span>Think</span><h3>กำหนดโจทย์</h3><p>สรุปข้อมูลที่เว็บไซต์ต้องมี และวางโครงสร้างให้ครอบคลุมข้อกำหนดของรายวิชา</p></article>
+          <article><span>Prompt</span><h3>สื่อสารกับ AI</h3><p>ระบุ Context, Intent และ Constraints เช่น ใช้ HTML/CSS/JavaScript และต้อง Responsive</p></article>
+          <article><span>Result</span><h3>ตรวจสอบผลลัพธ์</h3><p>เปิดหน้าเว็บ ตรวจไฟล์ CSS/JavaScript และทดสอบการแสดงผลแทนการเชื่อคำตอบของ AI ทันที</p></article>
+          <article><span>Refine</span><h3>แก้ไขและทดสอบซ้ำ</h3><p>เมื่อพบปัญหา CSS หรือเนื้อหาไม่แสดง จึงวิเคราะห์สาเหตุ ปรับโค้ด และสร้างชุดไฟล์ใหม่ที่ปลอดภัยกว่าเดิม</p></article>
+        </div>
+        <div class="ai-disclosure">
+          <strong>AI Disclosure</strong>
+          <p>เว็บไซต์นี้ใช้ ChatGPT เป็นผู้ช่วยด้านการวางแผนโครงสร้าง ร่างโค้ด ตรวจสอบปัญหา และเสนอแนวทางปรับปรุง ผู้จัดทำเป็นผู้ตรวจสอบ แก้ไข และรับผิดชอบผลงานขั้นสุดท้าย</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
+        <div class="section-heading light">
+          <p class="eyebrow">07 / CONTACT</p>
+          <h2>ช่องทางการติดต่อ</h2>
+          <p>เพื่อไม่สร้างข้อมูลเท็จ ช่องทางที่ผู้ใช้ยังไม่ได้ให้ไว้จะแสดงเป็น “กรุณาเพิ่มข้อมูลจริง”</p>
+        </div>
+        <div class="contact-list">
+          <div><span>Email</span><strong class="placeholder">กรุณาเพิ่มอีเมลจริง</strong></div>
+          <div><span>Phone</span><strong class="placeholder">กรุณาเพิ่มเบอร์โทร (ถ้าต้องการเผยแพร่)</strong></div>
+          <div><span>GitHub</span><strong class="placeholder">กรุณาเพิ่มชื่อผู้ใช้ / Repository URL หลังสร้าง Repo</strong></div>
+          <div><span>Social</span><strong class="placeholder">กรุณาเพิ่มช่องทางที่ต้องการ เช่น Facebook / Instagram / LinkedIn</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year">2026</span> สหภาพ ดาระดาด · 67122630107</p>
+      <a href="#top">กลับด้านบน ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
